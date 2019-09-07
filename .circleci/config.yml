@@ -9,7 +9,7 @@ jobs:
         PIPENV_VENV_IN_PROJECT: true
       steps:
         - checkout
-        -run: python -m pip install --upgrade pip
+        - run: python -m pip install --upgrade pip
         
   two:
     docker:
@@ -18,7 +18,7 @@ jobs:
           PIPENV_VENV_IN_PROJECT: true
       steps:
         - checkout
-        -run: |
+        - run: |
           pip install pytest
           pytest
   workflows:
